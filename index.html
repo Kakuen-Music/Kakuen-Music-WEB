@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakuen Music - Oficjalna Strona</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Oficjalna strona Kakuen Music – albumy, singiel, nowości i kontakt.">
+    <meta name="keywords" content="Kakuen Music, kakuen music, albumy, singiel, polska muzyka, nowości, kontakt">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Favicon.png">
+</head>
+<body>
+    <!-- Nawigacja -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Kakuen Music.png" alt="Kakuen Music Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="lang" data-pl="O zespole" data-en="About">O zespole</a></li>
+                <li><a href="#discography" class="lang" data-pl="Dyskografia" data-en="Discography">Dyskografia</a></li>
+                <li><a href="#news" class="lang" data-pl="Nowości" data-en="News">Nowości</a></li>
+                <li><a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+                <li><a href="#contact" class="lang" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
+            </ul>
+            <div class="navbar-controls">
+                <button id="theme-toggle" class="mode-btn">🌙</button>
+                <div class="language-switch">
+                    <button class="lang-btn active" data-lang="pl">PL</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1 class="lang" data-pl="Witam na oficjalnej stronie Kakuen Music" data-en="Welcome to the official Kakuen Music website">
+                Witam na oficjalnej stronie Kakuen Music
+            </h1>
+        </div>
+    </header>
+
+    <!-- O zespole -->
+    <section id="about" class="section">
+        <h2 class="lang" data-pl="O zespole" data-en="About">O zespole</h2>
+        <p class="lang" data-pl="Jestem młodym muzykiem próbującym swoich sił w tej branży. Kakuen Music to ja." data-en="I am a young musician trying my luck in the music industry. Kakuen Music it's me.">
+            Jestem młodym muzykiem próbującym swoich sił w tej branży. Kakuen Music to ja.
+        </p>
+    </section>
+
+    <!-- Dyskografia -->
+    <section id="discography" class="section">
+        <h2 class="lang" data-pl="Dyskografia" data-en="Discography">Dyskografia</h2>
+        <div class="albums">
+            <!-- Album 1 -->
+            <div class="album">
+                <img src="Best-Memory of the Old Years.png" alt="Kakuen Music Album Memory of the Old Years">
+                <h3>Memory of the Old Years</h3>
+                <p>Rok wydania: 2025</p>
+                <div class="album-buttons">
+                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album1')" class="btn lang" data-pl="Zobacz album" data-en="View Album">Zobacz album</a>
+                </div>
+                <div id="tracklist-album1" class="tracklist">
+                    <ul>
+                        <li>Hybrid</li>
+                        <li>Very Strange Song</li>
+                        <li>Madman From Choroszcz</li>
+                        <li>Hailerau</li>
+                        <li>Nomadzki Czas Upłynął</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Album 2 -->
+            <div class="album">
+                <img src="Kakuen Music.png" alt="Kakuen Music Album Wkrótce">
+                <h3>Wkrótce</h3>
+                <p>Data premiery: ???</p>
+                <div class="album-buttons">
+                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album2')" class="btn lang" data-pl="Zobacz album" data-en="View Album">Zobacz album</a>
+                </div>
+                <div id="tracklist-album2" class="tracklist">
+                    <ul>
+                        <li>Tajne</li><li>Tajne</li><li>Tajne</li><li>Tajne</li><li>Tajne</li>
+                        <li>Tajne</li><li>Tajne</li><li>Tajne</li><li>Tajne</li><li>Tajne</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Album 3 -->
+            <div class="album">
+                <img src="Silver-Era.png" alt="Kakuen Music Album Silver Era">
+                <h3>Silver Era</h3>
+                <p>Rok wydania: 2025</p>
+                <div class="album-buttons">
+                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album3')" class="btn lang" data-pl="Zobacz album" data-en="View Album">Zobacz album</a>
+                </div>
+                <div id="tracklist-album3" class="tracklist">
+                    <ul>
+                        <li>Tip to Life</li>
+                        <li>Silver Era</li>
+                        <li>Blue King</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nowości -->
+    <section id="news" class="section">
+        <h2 class="lang" data-pl="Nowości" data-en="News">Nowości</h2>
+        <div class="promo">
+            <img src="Silver-Era.png" alt="Kakuen Music Silver Era" class="promo-img">
+            <div class="promo-text">
+                <h3 class="lang" data-pl="Część singli z albumu „Silver Era” – już dostępna!" data-en="Some singles from the album 'Silver Era' – now available!">Część singli z albumu „Silver Era” – już dostępna!</h3>
+                <p class="lang" data-pl="„Silver Era” (2025) to nadchodzący projekt Kakuen Music. Zawiera utwory „Silver Era”, „Blue King” i „Tip to Life”." data-en="'Silver Era' (2025) is the upcoming project by Kakuen Music. Includes tracks 'Silver Era', 'Blue King', and 'Tip to Life'.">„Silver Era” (2025) to nadchodzący projekt Kakuen Music. Zawiera utwory „Silver Era”, „Blue King” i „Tip to Life”.</p>
+                <div class="album-buttons">
+                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-silver')" class="btn lang" data-pl="Zobacz album" data-en="View Album">Zobacz album</a>
+                </div>
+                <div id="tracklist-news-silver" class="tracklist">
+                    <ul>
+                        <li>Tip to Life</li>
+                        <li>Silver Era</li>
+                        <li>Blue King</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="promo">
+            <img src="Best-Memory of the Old Years.png" alt="Kakuen Music Memory of the Old Years" class="promo-img">
+            <div class="promo-text">
+                <h3 class="lang" 
+                    data-pl="Część singli z albumu „Memory of the Old Years” – już dostępna!" 
+                    data-en="Some singles from 'Memory of the Old Years' – now available!">
+                    Część singli z albumu „Memory of the Old Years” – już dostępna!
+                </h3>
+                <p class="lang" 
+                   data-pl="„Memory of the Old Years” (2025) to nadchodzący album Kakuen Music. Zawiera utwory: „Hybrid”, „Very Strange Song”, „Madman From Choroszcz”, „Hailerau” i „Nomadzki Czas Upłynął”." 
+                   data-en="'Memory of the Old Years' (2025) is Kakuen Music's upcoming album. It includes tracks: 'Hybrid', 'Very Strange Song', 'Madman From Choroszcz', 'Hailerau' and 'Nomadzki Czas Upłynął'.">
+                   „Memory of the Old Years” (2025) to nadchodzący album Kakuen Music. Zawiera utwory: „Hybrid”, „Very Strange Song”, „Madman From Choroszcz”, „Hailerau” i „Nomadzki Czas Upłynął”.
+                </p>
+                <div class="album-buttons">
+                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-memory')" class="btn lang" data-pl="Zobacz album" data-en="View Album">Zobacz album</a>
+                </div>
+                <div id="tracklist-news-memory" class="tracklist">
+                    <ul>
+                        <li>Hybrid</li>
+                        <li>Very Strange Song</li>
+                        <li>Madman From Choroszcz</li>
+                        <li>Hailerau</li>
+                        <li>Nomadzki Czas Upłynął</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="section">
+        <h2 class="lang" data-pl="Kontakt" data-en="Contact">Kontakt</h2>
+        <p class="lang" 
+           data-pl='Skontaktuj się mailowo: <a href="mailto:kakuenmusic@gmail.com">kakuenmusic@gmail.com</a>' 
+           data-en='Contact via email: <a href="mailto:kakuenmusic@gmail.com">kakuenmusic@gmail.com</a>'>
+           Skontaktuj się mailowo: <a href="mailto:kakuenmusic@gmail.com">kakuenmusic@gmail.com</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kakuen Music. Wszelkie prawa zastrzeżone. | 
+        <a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank" rel="noopener noreferrer">Spotify</a> | 
+        <a href="mailto:kakuenmusic@gmail.com">Kontakt</a></p>
+    </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Toggle tracklist
+    window.toggleTracklist = function(id) {
+        document.getElementById(id).classList.toggle("open");
+    };
+
+    // Toggle dark mode
+    const toggleBtn = document.getElementById("theme-toggle");
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    // Language switcher
+    const langButtons = document.querySelectorAll(".lang-btn");
+    langButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const lang = btn.dataset.lang;
+            langButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            document.querySelectorAll(".lang").forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${lang}`);
+            });
+        });
+    });
+});
+</script>
+
+</body>
+</html>

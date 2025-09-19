@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Strona główna -->
+    <url>
+        <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- O zespole -->
+    <url>
+        <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#about</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Dyskografia -->
+    <url>
+        <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#discography</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Nowości -->
+    <url>
+        <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#news</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Kontakt -->
+    <url>
+        <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#contact</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Spotify -->
+    <url>
+        <loc>https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+</urlset>
