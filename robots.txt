@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kakuen-music.github.io/Kakuen-Music-WEB/sitemap.xml
+Sitemap: https://kakuen-music.github.io/Kakuen-Music-Official-Website/sitemap.xml  
