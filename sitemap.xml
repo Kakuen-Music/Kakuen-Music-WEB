@@ -3,7 +3,7 @@
 
   <!-- Strona główna -->
   <url>
-    <loc>https://kakuen-music.github.io/Kakuen-Music-Official-Website/</loc>
+    <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/</loc>
     <lastmod>2025-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,22 +11,22 @@
 
   <!-- Sekcje strony -->
   <url>
-    <loc>https://kakuen-music.github.io/Kakuen-Music-Official-Website/#about</loc>
+    <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#about</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://kakuen-music.github.io/Kakuen-Music-Official-Website/#discography</loc>
+    <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#discography</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://kakuen-music.github.io/Kakuen-Music-Official-Website/#news</loc>
+    <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#news</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://kakuen-music.github.io/Kakuen-Music-Official-Website/#contact</loc>
+    <loc>https://kakuen-music.github.io/Kakuen-Music-WEB/#contact</loc>
     <priority>0.6</priority>
   </url>
 
