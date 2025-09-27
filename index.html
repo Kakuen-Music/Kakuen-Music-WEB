@@ -26,6 +26,13 @@
                 <li><a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank">Spotify</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
+            <div class="navbar-controls">
+                <button class="mode-btn" onclick="document.body.classList.toggle('dark-mode')">🌙/☀️</button>
+                <div class="language-switch">
+                    <button class="lang-btn active" onclick="setLanguage('pl')">PL</button>
+                    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                </div>
+            </div>
         </nav>
         <div class="hero">
             <h1>Witam na oficjalnej stronie Kakuen Music</h1>
@@ -48,6 +55,7 @@
                 <img src="Best-Memory of the Old Years.png" alt="Memory of the Old Years">
                 <h3>Memory of the Old Years</h3>
                 <p>Rok wydania: 2025</p>
+                <p>Część singli już dostępna</p>
                 <div class="album-buttons">
                     <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album1')" class="btn">Zobacz album</a>
                 </div>
@@ -59,6 +67,7 @@
                         <li>Madman From Psychiatric Hospital</li>
                         <li>Hailerau</li>
                         <li>Nomadzki Czas Upłynął</li>
+                        <li>Nidiraj</li>
                     </ul>
                 </div>
             </div>
@@ -68,15 +77,16 @@
                 <img src="The Essence Of Kakuen Music.png" alt="The Essence Of Kakuen Music">
                 <h3>The Essence Of Kakuen Music</h3>
                 <p>Data premiery: 2025</p>
+                <p>Część singli już dostępna</p>
                 <div class="album-buttons">
                     <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album2')" class="btn">Zobacz album</a>
                 </div>
                 <div id="tracklist-album2" class="tracklist">
                     <ul>
                         <li>Nomadzki Czas Upłynął (Remastered I)</li>
-                        <li>Tajne</li><li>Tajne</li><li>Tajne</li>
-                        <li>Tajne</li><li>Tajne</li><li>Tajne</li>
-                        <li>Tajne</li><li>Tajne</li><li>Tajne</li>
+                        <li>Stagioni (Kakuen Music Sing)</li>
+                        <li>Io Voglio Vivere (Kakuen Music Sing)</li>
+                        <li>Song Of A Life</li>
                     </ul>
                 </div>
             </div>
@@ -86,6 +96,7 @@
                 <img src="Silver-Era.png" alt="Silver Era">
                 <h3>Silver Era</h3>
                 <p>Rok wydania: 2025</p>
+                <p>Część singli już dostępna</p>
                 <div class="album-buttons">
                     <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album3')" class="btn">Zobacz album</a>
                 </div>
@@ -105,6 +116,7 @@
                 <img src="Kakuen-Rap-Album-Logo.png" alt="Kakuen Rap">
                 <h3>Kakuen Rap</h3>
                 <p>Rok wydania: 2025</p>
+                <p>Album już dostępny</p>
                 <div class="album-buttons">
                     <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album4')" class="btn">Zobacz album</a>
                 </div>
@@ -176,7 +188,7 @@
         <div class="promo">
             <img src="Silver-Era.png" alt="Silver Era" class="promo-img">
             <div class="promo-text">
-                <h3>Album „Silver Era” – już dostępny!</h3>
+                <h3>Album „Silver Era” – Część singli już dostępna!</h3>
                 <p>„Silver Era” (2025) to projekt Kakuen Music. Zawiera m.in. „Silver Era”, „Blue King” i „Tip to Life”.</p>
                 <div class="album-buttons">
                     <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-silver')" class="btn">Zobacz album</a>
@@ -197,17 +209,18 @@
         <div class="promo">
             <img src="The Essence Of Kakuen Music.png" alt="The Essence Of Kakuen Music" class="promo-img">
             <div class="promo-text">
-                <h3>Album „The Essence Of Kakuen Music” – już dostępny!</h3>
-                <p>„The Essence Of Kakuen Music” (2025) to projekt Kakuen Music. Zawiera „Nomadzki Czas Upłynął (Remastered I)” i inne tajemnicze kompozycje.</p>
+                <h3>Album „The Essence Of Kakuen Music” – Część singli już dostępna!</h3>
+                <p>„The Essence Of Kakuen Music” (2025) to projekt Kakuen Music. Zawiera „Nomadzki Czas Upłynął (Remastered I)” i inne kompozycje.</p>
                 <div class="album-buttons">
                     <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-essence')" class="btn">Zobacz album</a>
                 </div>
                 <div id="tracklist-news-essence" class="tracklist">
                     <ul>
                         <li>Nomadzki Czas Upłynął (Remastered I)</li>
-                        <li>Tajne</li><li>Tajne</li><li>Tajne</li>
-                        <li>Tajne</li><li>Tajne</li><li>Tajne</li>
-                        <li>Tajne</li><li>Tajne</li><li>Tajne</li>
+                        <li>Stagioni (Kakuen Music Sing)</li>
+                        <li>Io Voglio Vivere (Kakuen Music Sing)</li>
+                        <li>Song Of A Life</li>
+                        
                     </ul>
                 </div>
             </div>
@@ -217,7 +230,7 @@
         <div class="promo">
             <img src="Best-Memory of the Old Years.png" alt="Memory of the Old Years" class="promo-img">
             <div class="promo-text">
-                <h3>Album „Memory of the Old Years” – już dostępny!</h3>
+                <h3>Album „Memory of the Old Years” – Część singli już dostępna!</h3>
                 <p>„Memory of the Old Years” (2025) to album Kakuen Music zawierający takie utwory jak „Hybrid”, „Very Strange Song”, „Madman From Psychiatric Hospital”, „Hailerau” i „Nomadzki Czas Upłynął”.</p>
                 <div class="album-buttons">
                     <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-memory')" class="btn">Zobacz album</a>
@@ -230,6 +243,8 @@
                         <li>Madman From Psychiatric Hospital</li>
                         <li>Hailerau</li>
                         <li>Nomadzki Czas Upłynął</li>
+                        <li>Nidiraj</li>
+                        
                     </ul>
                 </div>
             </div>
@@ -252,7 +267,16 @@
 function toggleTracklist(id) {
     document.getElementById(id).classList.toggle("open");
 }
+
+function setLanguage(lang) {
+    const buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    if(lang === 'pl') buttons[0].classList.add('active');
+    else buttons[1].classList.add('active');
+    // Tutaj można dodać logikę zmiany treści języka
+}
 </script>
 
 </body>
 </html>
+
