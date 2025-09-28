@@ -146,13 +146,11 @@ body.dark-mode .lang-btn.active {
 
 /* Hero */
 .hero {
-  margin-top: 3rem;
+  margin: 3rem auto;
   padding: 3rem 2rem;
   background: linear-gradient(135deg,#e6f3ff,#f9e6ff);
   border-radius: 20px;
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
@@ -268,7 +266,7 @@ body.dark-mode .album {
   padding: 0;
   border-radius: 8px;
   border: 1px solid #eee;
-  transition: 0.5s;
+  transition: max-height 0.5s ease, padding 0.3s ease;
 }
 
 body.dark-mode .tracklist {
@@ -284,6 +282,8 @@ body.dark-mode .tracklist {
 .tracklist ul {
   list-style: none;
   counter-reset: item;
+  padding: 0;
+  margin: 0;
 }
 
 .tracklist li {

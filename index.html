@@ -1,282 +1,248 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kakuen Music - Oficjalna Strona</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Oficjalna strona Kakuen Music – albumy, single, nowości i kontakt.">
-    <meta name="keywords" content="Kakuen Music, kakuen music, albumy, single, polska muzyka, nowości, kontakt">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="Favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kakuen Music - Oficjalna Strona</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="Favicon.png">
 </head>
 <body>
-    <!-- Nawigacja -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="Kakuen Music.png" alt="Kakuen Music Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">O zespole</a></li>
-                <li><a href="#discography">Dyskografia</a></li>
-                <li><a href="#news">Nowości</a></li>
-                <li><a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank">Spotify</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-            <div class="navbar-controls">
-                <button class="mode-btn" onclick="document.body.classList.toggle('dark-mode')">🌙/☀️</button>
-                <div class="language-switch">
-                    <button class="lang-btn active" onclick="setLanguage('pl')">PL</button>
-                    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-                </div>
-            </div>
-        </nav>
-        <div class="hero">
-            <h1>Witam na oficjalnej stronie Kakuen Music</h1>
+  <!-- Nawigacja -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="Kakuen Music.png" alt="Kakuen Music Logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" class="lang-content pl">O zespole</a><a href="#about" class="lang-content en">About</a></li>
+        <li><a href="#discography" class="lang-content pl">Dyskografia</a><a href="#discography" class="lang-content en">Discography</a></li>
+        <li><a href="#news" class="lang-content pl">Nowości</a><a href="#news" class="lang-content en">News</a></li>
+        <li><a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank">Spotify</a></li>
+        <li><a href="#contact" class="lang-content pl">Kontakt</a><a href="#contact" class="lang-content en">Contact</a></li>
+      </ul>
+      <div class="navbar-controls">
+        <button class="mode-btn" onclick="toggleDarkMode()">🌙/☀️</button>
+        <div class="language-switch">
+          <button class="lang-btn active" onclick="setLanguage('pl')">PL</button>
+          <button class="lang-btn" onclick="setLanguage('en')">EN</button>
         </div>
-    </header>
+      </div>
+    </nav>
+    <div class="hero">
+      <h1 class="lang-content pl">Witam na oficjalnej stronie Kakuen Music</h1>
+      <h1 class="lang-content en">Welcome to the official Kakuen Music website</h1>
+    </div>
+  </header>
 
-    <!-- O zespole -->
-    <section id="about" class="section">
-        <h2>O zespole</h2>
-        <p>Jestem młodym muzykiem próbującym swoich sił w tej branży. Kakuen Music to ja.</p>
-    </section>
+  <!-- O zespole -->
+  <section id="about" class="section">
+    <h2 class="lang-content pl">O zespole</h2>
+    <h2 class="lang-content en">About</h2>
+    <p class="lang-content pl">Jestem młodym muzykiem próbującym swoich sił w tej branży. Kakuen Music to ja.</p>
+    <p class="lang-content en">I am a young musician trying my hand in this industry. Kakuen Music is me.</p>
+  </section>
 
-    <!-- Dyskografia -->
-    <section id="discography" class="section">
-        <h2>Dyskografia</h2>
-        <div class="albums">
-
-            <!-- Album 1 -->
-            <div class="album">
-                <img src="Best-Memory of the Old Years.png" alt="Memory of the Old Years">
-                <h3>Memory of the Old Years</h3>
-                <p>Rok wydania: 2025</p>
-                <p>Część singli już dostępna</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album1')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-album1" class="tracklist">
-                    <ul>
-                        <li>Intro Blue Spirit</li>
-                        <li>Hybrid</li>
-                        <li>Very Strange Song</li>
-                        <li>Madman From Psychiatric Hospital</li>
-                        <li>Hailerau</li>
-                        <li>Nomadzki Czas Upłynął</li>
-                        <li>Nidiraj</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Album 2 -->
-            <div class="album">
-                <img src="The Essence Of Kakuen Music.png" alt="The Essence Of Kakuen Music">
-                <h3>The Essence Of Kakuen Music</h3>
-                <p>Data premiery: 2025</p>
-                <p>Część singli już dostępna</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album2')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-album2" class="tracklist">
-                    <ul>
-                        <li>Nomadzki Czas Upłynął (Remastered I)</li>
-                        <li>Stagioni (Kakuen Music Sing)</li>
-                        <li>Io Voglio Vivere (Kakuen Music Sing)</li>
-                        <li>Song Of A Life</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Album 3 -->
-            <div class="album">
-                <img src="Silver-Era.png" alt="Silver Era">
-                <h3>Silver Era</h3>
-                <p>Rok wydania: 2025</p>
-                <p>Część singli już dostępna</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album3')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-album3" class="tracklist">
-                    <ul>
-                        <li>Tip to Life</li>
-                        <li>Silver Era</li>
-                        <li>Blue King</li>
-                        <li>Najlepszy Rok</li>
-                        <li>Zwei irdische Heiligkeiten</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Album 4 -->
-            <div class="album">
-                <img src="Kakuen-Rap-Album-Logo.png" alt="Kakuen Rap">
-                <h3>Kakuen Rap</h3>
-                <p>Rok wydania: 2025</p>
-                <p>Album już dostępny</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album4')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-album4" class="tracklist">
-                    <ul>
-                        <li>Intro Czym Jest rap</li>
-                        <li>AC Milan</li>
-                        <li>Białystok</li>
-                        <li>Danilo</li>
-                        <li>Duch Czerwono Czarny</li>
-                        <li>GTA VC</li>
-                        <li>Italian Melody</li>
-                        <li>Kakuen Music</li>
-                        <li>Kenwood</li>
-                        <li>Legendy</li>
-                        <li>Mediolan</li>
-                        <li>My Music Band</li>
-                        <li>Nomadi Band</li>
-                        <li>Pamięć Muzycznych Polskich Lat</li>
-                        <li>Pioneer</li>
-                        <li>PSTwo FAT</li>
-                        <li>Retro CRT</li>
-                        <li>Serie A</li>
-                    </ul>
-                </div>
-            </div>
+  <!-- Dyskografia -->
+  <section id="discography" class="section">
+    <h2 class="lang-content pl">Dyskografia</h2>
+    <h2 class="lang-content en">Discography</h2>
+    <div class="albums">
+      <!-- Album 1 -->
+      <div class="album">
+        <img src="Best-Memory of the Old Years.png" alt="Memory of the Old Years">
+        <h3>Memory of the Old Years</h3>
+        <p class="lang-content pl">Rok wydania: 2025</p>
+        <p class="lang-content en">Release year: 2025</p>
+        <p class="lang-content pl">Część singli już dostępna</p>
+        <p class="lang-content en">Some singles already available</p>
+        <div class="album-buttons">
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album1')" class="btn lang-content pl">Zobacz album</a>
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album1')" class="btn lang-content en">View Album</a>
         </div>
-    </section>
-
-    <!-- Nowości -->
-    <section id="news" class="section">
-        <h2>Nowości</h2>
-
-        <!-- Kakuen Rap -->
-        <div class="promo">
-            <img src="Kakuen-Rap-Album-Logo.png" alt="Kakuen Rap" class="promo-img">
-            <div class="promo-text">
-                <h3>Album „Kakuen Rap” – już dostępny!</h3>
-                <p>„Kakuen Rap” (2025) to najnowszy projekt Kakuen Music. Album w pełni dostępny na Spotify i innych platformach.</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-rap')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-news-rap" class="tracklist">
-                    <ul>
-                        <li>Intro Czym Jest rap</li>
-                        <li>AC Milan</li>
-                        <li>Białystok</li>
-                        <li>Danilo</li>
-                        <li>Duch Czerwono Czarny</li>
-                        <li>GTA VC</li>
-                        <li>Italian Melody</li>
-                        <li>Kakuen Music</li>
-                        <li>Kenwood</li>
-                        <li>Legendy</li>
-                        <li>Mediolan</li>
-                        <li>My Music Band</li>
-                        <li>Nomadi Band</li>
-                        <li>Pamięć Muzycznych Polskich Lat</li>
-                        <li>Pioneer</li>
-                        <li>PSTwo FAT</li>
-                        <li>Retro CRT</li>
-                        <li>Serie A</li>
-                    </ul>
-                </div>
-            </div>
+        <div id="tracklist-album1" class="tracklist">
+          <ul>
+            <li>Intro Blue Spirit</li>
+            <li>Hybrid</li>
+            <li>Very Strange Song</li>
+            <li>Madman From Psychiatric Hospital</li>
+            <li>Hailerau</li>
+            <li>Nomadzki Czas Upłynął</li>
+            <li>Nidiraj</li>
+          </ul>
         </div>
+      </div>
 
-        <!-- Silver Era -->
-        <div class="promo">
-            <img src="Silver-Era.png" alt="Silver Era" class="promo-img">
-            <div class="promo-text">
-                <h3>Album „Silver Era” – Część singli już dostępna!</h3>
-                <p>„Silver Era” (2025) to projekt Kakuen Music. Zawiera m.in. „Silver Era”, „Blue King” i „Tip to Life”.</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-silver')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-news-silver" class="tracklist">
-                    <ul>
-                        <li>Tip to Life</li>
-                        <li>Silver Era</li>
-                        <li>Blue King</li>
-                        <li>Najlepszy Rok</li>
-                        <li>Zwei irdische Heiligkeiten</li>
-                    </ul>
-                </div>
-            </div>
+      <!-- Album 2 -->
+      <div class="album">
+        <img src="The Essence Of Kakuen Music.png" alt="The Essence Of Kakuen Music">
+        <h3>The Essence Of Kakuen Music</h3>
+        <p class="lang-content pl">Data premiery: 2025</p>
+        <p class="lang-content en">Release date: 2025</p>
+        <p class="lang-content pl">Część singli już dostępna</p>
+        <p class="lang-content en">Some singles already available</p>
+        <div class="album-buttons">
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album2')" class="btn lang-content pl">Zobacz album</a>
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album2')" class="btn lang-content en">View Album</a>
         </div>
-
-        <!-- Essence -->
-        <div class="promo">
-            <img src="The Essence Of Kakuen Music.png" alt="The Essence Of Kakuen Music" class="promo-img">
-            <div class="promo-text">
-                <h3>Album „The Essence Of Kakuen Music” – Część singli już dostępna!</h3>
-                <p>„The Essence Of Kakuen Music” (2025) to projekt Kakuen Music. Zawiera „Nomadzki Czas Upłynął (Remastered I)” i inne kompozycje.</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-essence')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-news-essence" class="tracklist">
-                    <ul>
-                        <li>Nomadzki Czas Upłynął (Remastered I)</li>
-                        <li>Stagioni (Kakuen Music Sing)</li>
-                        <li>Io Voglio Vivere (Kakuen Music Sing)</li>
-                        <li>Song Of A Life</li>
-                        
-                    </ul>
-                </div>
-            </div>
+        <div id="tracklist-album2" class="tracklist">
+          <ul>
+            <li>Nomadzki Czas Upłynął (Remastered I)</li>
+            <li>Stagioni (Kakuen Music Sing)</li>
+            <li>Io Voglio Vivere (Kakuen Music Sing)</li>
+            <li>Song Of A Life</li>
+          </ul>
         </div>
+      </div>
 
-        <!-- Memory -->
-        <div class="promo">
-            <img src="Best-Memory of the Old Years.png" alt="Memory of the Old Years" class="promo-img">
-            <div class="promo-text">
-                <h3>Album „Memory of the Old Years” – Część singli już dostępna!</h3>
-                <p>„Memory of the Old Years” (2025) to album Kakuen Music zawierający takie utwory jak „Hybrid”, „Very Strange Song”, „Madman From Psychiatric Hospital”, „Hailerau” i „Nomadzki Czas Upłynął”.</p>
-                <div class="album-buttons">
-                    <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-memory')" class="btn">Zobacz album</a>
-                </div>
-                <div id="tracklist-news-memory" class="tracklist">
-                    <ul>
-                        <li>Intro Blue Spirit</li>
-                        <li>Hybrid</li>
-                        <li>Very Strange Song</li>
-                        <li>Madman From Psychiatric Hospital</li>
-                        <li>Hailerau</li>
-                        <li>Nomadzki Czas Upłynął</li>
-                        <li>Nidiraj</li>
-                        
-                    </ul>
-                </div>
-            </div>
+      <!-- Album 3 -->
+      <div class="album">
+        <img src="Silver-Era.png" alt="Silver Era">
+        <h3>Silver Era</h3>
+        <p class="lang-content pl">Rok wydania: 2025</p>
+        <p class="lang-content en">Release year: 2025</p>
+        <p class="lang-content pl">Część singli już dostępna</p>
+        <p class="lang-content en">Some singles already available</p>
+        <div class="album-buttons">
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album3')" class="btn lang-content pl">Zobacz album</a>
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album3')" class="btn lang-content en">View Album</a>
         </div>
-    </section>
+        <div id="tracklist-album3" class="tracklist">
+          <ul>
+            <li>Tip to Life</li>
+            <li>Silver Era</li>
+            <li>Blue King</li>
+            <li>Najlepszy Rok</li>
+            <li>Zwei irdische Heiligkeiten</li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- Kontakt -->
-    <section id="contact" class="section">
-        <h2>Kontakt</h2>
-        <p>Skontaktuj się mailowo: <a href="mailto:kakuenmusic@gmail.com">kakuenmusic@gmail.com</a></p>
-    </section>
+      <!-- Album 4 -->
+      <div class="album">
+        <img src="Kakuen-Rap-Album-Logo.png" alt="Kakuen Rap">
+        <h3>Kakuen Rap</h3>
+        <p class="lang-content pl">Rok wydania: 2025</p>
+        <p class="lang-content en">Release year: 2025</p>
+        <p class="lang-content pl">Album już dostępny</p>
+        <p class="lang-content en">Album available now</p>
+        <div class="album-buttons">
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album4')" class="btn lang-content pl">Zobacz album</a>
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album4')" class="btn lang-content en">View Album</a>
+        </div>
+        <div id="tracklist-album4" class="tracklist">
+          <ul>
+            <li>Intro Czym Jest rap</li>
+            <li>AC Milan</li>
+            <li>Białystok</li>
+            <li>Danilo</li>
+            <li>Duch Czerwono Czarny</li>
+            <li>GTA VC</li>
+            <li>Italian Melody</li>
+            <li>Kakuen Music</li>
+            <li>Kenwood</li>
+            <li>Legendy</li>
+            <li>Mediolan</li>
+            <li>My Music Band</li>
+            <li>Nomadi Band</li>
+            <li>Pamięć Muzycznych Polskich Lat</li>
+            <li>Pioneer</li>
+            <li>PSTwo FAT</li>
+            <li>Retro CRT</li>
+            <li>Serie A</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Kakuen Music. Wszelkie prawa zastrzeżone. |
-        <a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank">Spotify</a> |
-        <a href="mailto:kakuenmusic@gmail.com">Kontakt</a></p>
-    </footer>
+  <!-- Nowości -->
+  <section id="news" class="section">
+    <h2 class="lang-content pl">Nowości</h2>
+    <h2 class="lang-content en">News</h2>
+    <div class="promo">
+      <img src="Kakuen-Rap-Album-Logo.png" alt="Kakuen Rap" class="promo-img">
+      <div class="promo-text">
+        <h3 class="lang-content pl">Album „Kakuen Rap” – już dostępny!</h3>
+        <h3 class="lang-content en">Album “Kakuen Rap” – available now!</h3>
+        <p class="lang-content pl">„Kakuen Rap” (2025) to najnowszy projekt Kakuen Music. Album w pełni dostępny na Spotify i innych platformach.</p>
+        <p class="lang-content en">“Kakuen Rap” (2025) is the latest project by Kakuen Music. Fully available on Spotify and other platforms.</p>
+        <div class="album-buttons">
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-rap')" class="btn lang-content pl">Zobacz album</a>
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-news-rap')" class="btn lang-content en">View Album</a>
+        </div>
+        <div id="tracklist-news-rap" class="tracklist">
+          <ul>
+            <li>Intro Czym Jest rap</li>
+            <li>AC Milan</li>
+            <li>Białystok</li>
+            <li>Danilo</li>
+            <li>Duch Czerwono Czarny</li>
+            <li>GTA VC</li>
+            <li>Italian Melody</li>
+            <li>Kakuen Music</li>
+            <li>Kenwood</li>
+            <li>Legendy</li>
+            <li>Mediolan</li>
+            <li>My Music Band</li>
+            <li>Nomadi Band</li>
+            <li>Pamięć Muzycznych Polskich Lat</li>
+            <li>Pioneer</li>
+            <li>PSTwo FAT</li>
+            <li>Retro CRT</li>
+            <li>Serie A</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-function toggleTracklist(id) {
-    document.getElementById(id).classList.toggle("open");
-}
+  <!-- Kontakt -->
+  <section id="contact" class="section">
+    <h2 class="lang-content pl">Kontakt</h2>
+    <h2 class="lang-content en">Contact</h2>
+    <p class="lang-content pl">Skontaktuj się mailowo: <a href="mailto:kakuenmusic@gmail.com">kakuenmusic@gmail.com</a></p>
+    <p class="lang-content en">Contact via email: <a href="mailto:kakuenmusic@gmail.com">kakuenmusic@gmail.com</a></p>
+  </section>
 
-function setLanguage(lang) {
-    const buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    if(lang === 'pl') buttons[0].classList.add('active');
-    else buttons[1].classList.add('active');
-    // Tutaj można dodać logikę zmiany treści języka
-}
-</script>
+  <footer>
+    <p>&copy; 2025 Kakuen Music. Wszelkie prawa zastrzeżone. |
+      <a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank">Spotify</a> |
+      <a href="mailto:kakuenmusic@gmail.com">Kontakt</a></p>
+  </footer>
 
+  <script>
+    // Przełączanie tracklisty
+    function toggleTracklist(id) {
+      document.getElementById(id).classList.toggle("open");
+    }
+
+    // Dark mode
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // Przełączanie języka
+    function setLanguage(lang) {
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      if(lang === 'pl') buttons[0].classList.add('active');
+      else buttons[1].classList.add('active');
+
+      const elementsPL = document.querySelectorAll('.lang-content.pl');
+      const elementsEN = document.querySelectorAll('.lang-content.en');
+
+      if(lang === 'pl') {
+        elementsPL.forEach(el => el.style.display = '');
+        elementsEN.forEach(el => el.style.display = 'none');
+      } else {
+        elementsPL.forEach(el => el.style.display = 'none');
+        elementsEN.forEach(el => el.style.display = '');
+      }
+    }
+
+    // Domyślny język: polski
+    setLanguage('pl');
+  </script>
 </body>
 </html>
-
