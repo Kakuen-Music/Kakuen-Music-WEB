@@ -72,8 +72,6 @@
             <li>Psychopats</li>
             <li>Święta Krew</li>
             <li>Musicians</li>
-            
-            
           </ul>
         </div>
       </div>
@@ -99,8 +97,6 @@
             <li>Seasons (Kakuen Music Cover I)</li>
             <li>Io Voglio Vivere (Kakuen Music Cover I Acapella)</li>
             <li>Numb (Kakuen Music Cover I)</li>
-            
-            
           </ul>
         </div>
       </div>
@@ -126,14 +122,32 @@
             <li>Zwei irdische Heiligkeiten</li>
             <li>Broken Passing Time</li>
             <li>My World</li>
-            
-           
-            
           </ul>
         </div>
       </div>
 
-      <!-- Album 4 -->
+      <!-- Nowy Album: Kakuen Music Classical Music I -->
+      <div class="album">
+        <img src="Kakuen Music Classical Music I.png" alt="Kakuen Music Classical Music I">
+        <h3>Kakuen Music Classical Music I</h3>
+        <p class="lang-content pl">Rok wydania: 2025</p>
+        <p class="lang-content en">Release year: 2025</p>
+        <p class="lang-content pl">Część singli już dostępna</p>
+        <p class="lang-content en">Some singles already available</p>
+        <div class="album-buttons">
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album5')" class="btn lang-content pl">Zobacz album</a>
+          <a href="javascript:void(0);" onclick="toggleTracklist('tracklist-album5')" class="btn lang-content en">View Album</a>
+        </div>
+        <div id="tracklist-album5" class="tracklist">
+          <ul>
+            <li>Melodia Październikowa</li>
+            <li>Emocje Pianisty</li>
+            <li>Nostalgiczny Dzień</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Album 4: Kakuen Rap -->
       <div class="album">
         <img src="Kakuen-Rap-Album-Logo.png" alt="Kakuen Rap">
         <h3>Kakuen Rap</h3>
@@ -221,15 +235,16 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Kakuen Music. Wszelkie prawa zastrzeżone. |
-      <a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank">Spotify</a> |
-      <a href="mailto:kakuenmusic@gmail.com">Kontakt</a></p>
+    <p>&copy; 2025 Kakuen Music. Wszelkie prawa zastrzeżone. | 
+    <a href="https://open.spotify.com/artist/6BPJJqMNg7C9Hyj3hKMExF" target="_blank">Spotify</a> | 
+    <a href="mailto:kakuenmusic@gmail.com">Kontakt</a></p>
   </footer>
 
   <script>
     // Przełączanie tracklisty
     function toggleTracklist(id) {
-      document.getElementById(id).classList.toggle("open");
+      const tracklist = document.getElementById(id);
+      if (tracklist) tracklist.classList.toggle("open");
     }
 
     // Dark mode
@@ -237,26 +252,20 @@
       document.body.classList.toggle('dark-mode');
     }
 
-    // Przełączanie języka
+    // Language switch
     function setLanguage(lang) {
-      const buttons = document.querySelectorAll('.lang-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      if(lang === 'pl') buttons[0].classList.add('active');
-      else buttons[1].classList.add('active');
-
-      const elementsPL = document.querySelectorAll('.lang-content.pl');
-      const elementsEN = document.querySelectorAll('.lang-content.en');
-
-      if(lang === 'pl') {
-        elementsPL.forEach(el => el.style.display = '');
-        elementsEN.forEach(el => el.style.display = 'none');
-      } else {
-        elementsPL.forEach(el => el.style.display = 'none');
-        elementsEN.forEach(el => el.style.display = '');
-      }
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
+      document.querySelectorAll('.lang-content').forEach(el => {
+        if (el.classList.contains(lang)) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
     }
 
-    // Domyślny język: polski
+    // Inicjalizacja języka domyślnego
     setLanguage('pl');
   </script>
 </body>
