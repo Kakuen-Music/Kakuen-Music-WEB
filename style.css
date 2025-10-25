@@ -235,6 +235,7 @@ body.dark-mode .album {
 
 .album.silver-era img {
   height: 350px;
+  object-position: center top;
 }
 
 /* === Teksty w albumach === */
@@ -279,7 +280,6 @@ body.dark-mode .btn {
   background: #ff00ff;
   color: #fff;
 }
-
 body.dark-mode .btn:hover {
   background: #00f7ff;
   color: #000;
@@ -292,17 +292,15 @@ body.dark-mode .btn:hover {
   margin-top: 0.8rem;
   text-align: left;
   background: #fff;
-  border-radius: 12px;
-  border: 1px solid #ddd;
+  border-radius: 8px;
+  border: 1px solid #eee;
   transition: max-height 0.5s ease, padding 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 body.dark-mode .tracklist {
-  background: #1a1a1a;
+  background: #151515;
   border: 1px solid #333;
   color: #f0f0f0;
-  box-shadow: 0 4px 15px rgba(255,255,255,0.05);
 }
 
 .tracklist.open {
@@ -318,39 +316,15 @@ body.dark-mode .tracklist {
 }
 
 .tracklist li {
-  margin: 0.4rem 0;
-  padding: 0.6rem 0.8rem 0.6rem 3rem;
-  background: #f7f8fc;
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-  transition: 0.3s;
+  margin: 0.3rem 0;
+  padding: 0.4rem 0.8rem 0.4rem 3rem;
+  background: #f9f9fb;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  transition: 0.2s;
   position: relative;
   color: #333;
   list-style-type: none;
-}
-
-.tracklist li::before {
-  content: counter(item) ".";
-  counter-increment: item;
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #007bff;
-  color: #fff;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-}
-
-.tracklist li:hover {
-  background: #eef6ff;
-  transform: translateX(3px);
 }
 
 body.dark-mode .tracklist li {
@@ -359,13 +333,28 @@ body.dark-mode .tracklist li {
   color: #eee;
 }
 
-body.dark-mode .tracklist li::before {
-  background: #ff00ff;
-  color: #000;
+.tracklist li:hover {
+  transform: translateX(3px);
+  background: #eef6ff;
 }
 
 body.dark-mode .tracklist li:hover {
   background: #2a2a2a;
+}
+
+.tracklist li::before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: 8px;
+  color: #007bff;
+  font-weight: bold;
+  width: 25px;
+  text-align: right;
+}
+
+body.dark-mode .tracklist li::before {
+  color: #00f7ff;
 }
 
 /* === Footer === */
@@ -417,6 +406,10 @@ body.dark-mode footer {
   .albums { grid-template-columns: 1fr; }
   .album { max-width: 90%; min-height: auto; }
   .album img { height: 250px; }
+  .album.silver-era img {
+    height: 280px; /* lekko mniejsza wysokość w mobilnej */
+    object-fit: contain; /* oddala obraz, bez przycinania */
+  }
   .promo { flex-direction: column; align-items: center; }
   .promo-img { max-width: 90%; margin-bottom: 0.5rem; }
   .promo-text { text-align: center; }
