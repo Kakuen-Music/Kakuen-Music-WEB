@@ -194,8 +194,10 @@ body.dark-mode .section h2 {
   color: #ff00ff;
 }
 
-/* === Albumy === */
-.albums {
+/* === Albumy i Nowości === */
+.albums,
+.promo,
+.news-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
@@ -204,7 +206,9 @@ body.dark-mode .section h2 {
   justify-items: center;
 }
 
-.album {
+.album,
+.news,
+.promo-text {
   background: linear-gradient(135deg,#fdfdfd,#e6f3ff);
   padding: 1.2rem;
   border-radius: 12px;
@@ -220,12 +224,16 @@ body.dark-mode .section h2 {
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-body.dark-mode .album {
+body.dark-mode .album,
+body.dark-mode .news,
+body.dark-mode .promo-text {
   background: linear-gradient(135deg,#1a1a1a,#111);
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-.album img {
+.album img,
+.news img,
+.promo-img {
   width: 100%;
   height: 320px;
   object-fit: cover;
@@ -233,25 +241,33 @@ body.dark-mode .album {
   margin-bottom: 1rem;
 }
 
-.album.silver-era img {
-  height: 350px;
-  object-position: center top;
+.album.silver-era img,
+.album.memory-old img,
+.news.featured img,
+.promo-img {
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
 }
 
-/* === Teksty w albumach === */
-.album h3 {
+/* === Albumy/Nowości teksty === */
+.album h3,
+.news h3,
+.promo-text h3 {
   margin-bottom: 0.3rem;
   font-size: 1.2rem;
 }
 
-.album p {
+.album p,
+.news p,
+.promo-text p {
   margin-bottom: 1rem;
   font-size: 0.95rem;
   color: inherit;
 }
 
-/* === Przyciski albumów === */
-.album-buttons {
+.album-buttons,
+.news-buttons {
   display: flex;
   justify-content: center;
   gap: 0.7rem;
@@ -280,6 +296,7 @@ body.dark-mode .btn {
   background: #ff00ff;
   color: #fff;
 }
+
 body.dark-mode .btn:hover {
   background: #00f7ff;
   color: #000;
@@ -324,7 +341,6 @@ body.dark-mode .tracklist {
   transition: 0.2s;
   position: relative;
   color: #333;
-  list-style-type: none;
 }
 
 body.dark-mode .tracklist li {
@@ -343,7 +359,7 @@ body.dark-mode .tracklist li:hover {
 }
 
 .tracklist li::before {
-  content: counter(item) ".";
+  content: counter(item);
   counter-increment: item;
   position: absolute;
   left: 8px;
@@ -375,43 +391,25 @@ body.dark-mode footer {
   border-top: 1px solid #333;
 }
 
-/* === Promo sekcje === */
-.promo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 1000px;
-  margin: 3rem auto;
-}
-
-.promo-img {
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.promo-text {
-  flex: 1;
-  text-align: left;
-}
-
 /* === Responsywność === */
 @media(max-width:768px) {
   .nav-links { flex-direction: column; gap: 0.5rem; }
   .hero h1 { font-size: 1.5rem; }
   .section { padding: 1rem; }
-  .albums { grid-template-columns: 1fr; }
-  .album { max-width: 90%; min-height: auto; }
-  .album img { height: 250px; }
-  .album.silver-era img {
-    height: 280px; /* lekko mniejsza wysokość w mobilnej */
-    object-fit: contain; /* oddala obraz, bez przycinania */
+  .albums,
+  .news-container,
+  .promo { grid-template-columns: 1fr; }
+  .album,
+  .news,
+  .promo-text { max-width: 90%; min-height: auto; }
+
+  .album img,
+  .news img,
+  .promo-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0.8rem 0;
+    max-height: 320px;
   }
-  .promo { flex-direction: column; align-items: center; }
-  .promo-img { max-width: 90%; margin-bottom: 0.5rem; }
-  .promo-text { text-align: center; }
-  .promo-text p { font-size: 0.9rem; }
 }
