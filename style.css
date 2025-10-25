@@ -194,21 +194,16 @@ body.dark-mode .section h2 {
   color: #ff00ff;
 }
 
-/* === Albumy i Nowości === */
-.albums,
-.promo,
-.news-container {
+/* === Albumy === */
+.albums {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  justify-items: center;
 }
 
-.album,
-.news,
-.promo-text {
+.album {
   background: linear-gradient(135deg,#fdfdfd,#e6f3ff);
   padding: 1.2rem;
   border-radius: 12px;
@@ -224,57 +219,107 @@ body.dark-mode .section h2 {
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-body.dark-mode .album,
-body.dark-mode .news,
-body.dark-mode .promo-text {
+body.dark-mode .album {
   background: linear-gradient(135deg,#1a1a1a,#111);
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-.album img,
-.news img,
-.promo-img {
+.album img {
   width: 100%;
   height: 320px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.album.silver-era img,
-.album.memory-old img,
-.news.featured img,
-.promo-img {
-  height: auto;
-  max-height: 350px;
-  object-fit: contain;
+.album img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
-/* === Albumy/Nowości teksty === */
-.album h3,
-.news h3,
-.promo-text h3 {
+.album h3 {
   margin-bottom: 0.3rem;
   font-size: 1.2rem;
 }
 
-.album p,
-.news p,
-.promo-text p {
-  margin-bottom: 1rem;
+.album p {
+  margin-bottom: 0.8rem;
   font-size: 0.95rem;
-  color: inherit;
 }
 
-.album-buttons,
-.news-buttons {
+.album-buttons {
   display: flex;
   justify-content: center;
-  gap: 0.7rem;
-  margin-top: auto;
-  padding-top: 0.5rem;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
 }
 
+/* === Nowości === */
+.promo-container {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.promo.featured {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: linear-gradient(135deg,#fdfdfd,#e6f3ff);
+  padding: 1.2rem;
+  border-radius: 12px;
+  transition: 0.3s;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+body.dark-mode .promo.featured {
+  background: linear-gradient(135deg,#1a1a1a,#111);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.promo-img {
+  width: 35%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.promo-img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.promo-text {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.promo-text h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.promo-text p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.promo-text .album-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* === Przycisk === */
 .btn {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -284,7 +329,6 @@ body.dark-mode .promo-text {
   border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
-  margin-top: 0.3rem;
 }
 
 .btn:hover {
@@ -302,114 +346,127 @@ body.dark-mode .btn:hover {
   color: #000;
 }
 
-/* === Tracklisty === */
+/* === Tracklisty nowoczesne === */
 .tracklist {
   max-height: 0;
   overflow: hidden;
-  margin-top: 0.8rem;
-  text-align: left;
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  transition: max-height 0.5s ease, padding 0.3s ease;
-}
-
-body.dark-mode .tracklist {
-  background: #151515;
-  border: 1px solid #333;
-  color: #f0f0f0;
+  transition: max-height 0.4s ease;
+  margin-top: 0.5rem;
+  padding-left: 0;
 }
 
 .tracklist.open {
-  max-height: 1000px;
-  padding: 0.8rem;
-}
-
-.tracklist ul {
-  list-style: none;
-  counter-reset: item;
-  padding: 0;
-  margin: 0;
+  max-height: 500px; 
 }
 
 .tracklist li {
-  margin: 0.3rem 0;
-  padding: 0.4rem 0.8rem 0.4rem 3rem;
-  background: #f9f9fb;
-  border-radius: 6px;
-  border: 1px solid #eee;
-  transition: 0.2s;
+  list-style: none;
+  counter-increment: li-counter;
   position: relative;
+  padding-left: 50px; /* miejsce na numer */
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #333;
-}
-
-body.dark-mode .tracklist li {
-  background: #222;
-  border: 1px solid #333;
-  color: #eee;
-}
-
-.tracklist li:hover {
-  transform: translateX(3px);
-  background: #eef6ff;
-}
-
-body.dark-mode .tracklist li:hover {
-  background: #2a2a2a;
+  text-align: left;
+  transition: color 0.5s ease;
+  animation: textColorChange 3s infinite alternate;
 }
 
 .tracklist li::before {
-  content: counter(item);
-  counter-increment: item;
-  position: absolute;
-  left: 8px;
-  color: #007bff;
+  content: counter(li-counter);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   font-weight: bold;
-  width: 25px;
-  text-align: right;
+  color: #007bff;
+  background: #e0e0ff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transition: color 0.5s ease, background 0.5s ease;
+  animation: colorChange 3s infinite alternate;
+}
+
+/* Animacje kolorów */
+@keyframes colorChange {
+  0% { color: #007bff; background: #e0e0ff; }
+  25% { color: #7d3cff; background: #f0e0ff; }
+  50% { color: #ff00ff; background: #ffe0ff; }
+  75% { color: #00f7ff; background: #e0ffff; }
+  100% { color: #007bff; background: #e0e0ff; }
+}
+
+@keyframes textColorChange {
+  0% { color: #333; }
+  25% { color: #5555ff; }
+  50% { color: #ff33ff; }
+  75% { color: #33ffff; }
+  100% { color: #333; }
 }
 
 body.dark-mode .tracklist li::before {
   color: #00f7ff;
+  background: #222;
+  animation: colorChangeDark 3s infinite alternate;
 }
 
-/* === Footer === */
-footer {
-  background: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #eee;
-  transition: 0.3s;
+body.dark-mode .tracklist li {
+  color: #eee;
+  animation: textColorChangeDark 3s infinite alternate;
 }
 
-body.dark-mode footer {
-  background: #111;
-  color: #999;
-  border-top: 1px solid #333;
+@keyframes colorChangeDark {
+  0% { color: #00f7ff; background: #222; }
+  25% { color: #ff00ff; background: #333; }
+  50% { color: #7d3cff; background: #444; }
+  75% { color: #33ffff; background: #222; }
+  100% { color: #00f7ff; background: #111; }
+}
+
+@keyframes textColorChangeDark {
+  0% { color: #eee; }
+  25% { color: #ff33ff; }
+  50% { color: #7d3cff; }
+  75% { color: #33ffff; }
+  100% { color: #eee; }
 }
 
 /* === Responsywność === */
-@media(max-width:768px) {
-  .nav-links { flex-direction: column; gap: 0.5rem; }
-  .hero h1 { font-size: 1.5rem; }
-  .section { padding: 1rem; }
-  .albums,
-  .news-container,
-  .promo { grid-template-columns: 1fr; }
-  .album,
-  .news,
-  .promo-text { max-width: 90%; min-height: auto; }
+@media(max-width:1024px) {
+  .albums {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 
-  .album img,
-  .news img,
-  .promo-img {
+  .promo.featured {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .promo-img, .promo-text {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin: 0.8rem 0;
-    max-height: 320px;
+  }
+
+  .promo-text {
+    text-align: center;
+  }
+}
+
+@media(max-width:480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .album img {
+    height: 260px;
+  }
+
+  .album {
+    min-height: 480px;
   }
 }
